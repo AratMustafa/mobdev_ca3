@@ -35,7 +35,20 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'planets',
+        path: 'quotes',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../quotes/quotes.module').then( m => m.QuotesPageModule)
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../quote-details/quote-details.module').then( m => m.QuoteDetailsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'episodes',
         children: [
           {
             path: '',
