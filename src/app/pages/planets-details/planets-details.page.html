@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaulthref="/tabs/(planets:planets)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ planet?.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="planet">
+    <ion-card-content>
+      <ion-icon name="planet-sharp"></ion-icon>
+      Name : {{ planet.name  }}
+    </ion-card-content>
+    <ion-card-content>
+      <ion-icon name="person-sharp"></ion-icon>
+      Population : {{ planet.population  }}
+    </ion-card-content>
+    <ion-card-content>
+      <ion-icon name="partly-sunny-sharp"></ion-icon>
+      Climate : {{ planet.climate  }}
+    </ion-card-content>
+    <ion-card-content>
+      <ion-icon name="rocket-sharp"></ion-icon>
+      Diameter : {{ planet.diameter  }}
+    </ion-card-content>
+      
+  </ion-card>
+
+</ion-content>
