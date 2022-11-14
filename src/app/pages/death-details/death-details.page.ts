@@ -3,19 +3,19 @@ import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 
 @Component({
-  selector: 'app-quote-details',
-  templateUrl: './quote-details.page.html',
-  styleUrls: ['./quote-details.page.scss'],
+  selector: 'app-death-details',
+  templateUrl: './death-details.page.html',
+  styleUrls: ['./death-details.page.scss'],
 })
-export class QuoteDetailsPage implements OnInit {
+export class DeathDetailsPage implements OnInit {
 
-  quote: any;
+  death: any;
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.api.getQuote(id).subscribe(res => {
-      this.quote = res;
+    this.api.getDeath(id).subscribe(res => {
+      this.death = res;
     });
   }
 

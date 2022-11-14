@@ -8,26 +8,35 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getFilms(){
-    return this.http.get('https://swapi.dev/api/films');
+  getCharacters(){
+    return this.http.get('https://breakingbadapi.com/api/characters');
   }
 
-  getFilm(id){
-    return this.http.get(`https://swapi.dev/api/films/${id}`);
+  getCharacter(id){
+    return this.http.get(`https://breakingbadapi.com/api/characters/${id}`);
   }
-  getPeople(){
-    return this.http.get('https://swapi.dev/api/people');
-  }
-
-  getPerson(id){
-    return this.http.get(`https://swapi.dev/api/people/${id}`);
-  }
-  getPlanets(){
-    return this.http.get('https://swapi.dev/api/planets');
+  getDeats(){
+    return this.http.get('https://breakingbadapi.com/api/death-count');
   }
 
-  getPlanet(id){
-    return this.http.get(`https://swapi.dev/api/planets/${id}`);
+  getDeath(id){
+    return this.http.get(`https://breakingbadapi.com/api/death-count/${id}`);
   }
+  getEpisodes(){
+    return this.http.get('https://breakingbadapi.com/api/episodes');
+  }
+
+  getEpisode(id){
+    return this.http.get(`https://breakingbadapi.com/api/episodes/${id}`);
+  }
+
+  getQuotes(){
+    return this.http.get('https://breakingbadapi.com/api/quotes');
+  }
+
+  getQuote(id){
+    return this.http.get(`https://breakingbadapi.com/api/quotes/${id}`);
+  }
+  
 
 }
