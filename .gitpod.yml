@@ -4,6 +4,6 @@
 
 tasks:
   - init: npm i -g @ionic/cli 
-    command: ionic serve
+    command: ionic serve -y
 
 
