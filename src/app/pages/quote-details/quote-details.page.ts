@@ -10,12 +10,13 @@ import { ApiService } from '../../services/api.service';
 export class QuoteDetailsPage implements OnInit {
 
   quote: any;
+  quoteId = null;
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit() {
-    let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.api.getQuote(id).subscribe(res => {
-      this.quote = res;
+    this.quoteId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.api.getCharacter(this.quoteId).subscribe(res => {
+    this.quote = res[0];
     });
   }
 

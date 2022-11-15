@@ -10,12 +10,13 @@ import { ApiService } from '../../services/api.service';
 export class DeathDetailsPage implements OnInit {
 
   death: any;
+  deathId = null;
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit() {
-    let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.api.getDeath(id).subscribe(res => {
-      this.death = res;
+    this.deathId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.api.getDeath(this.deathId).subscribe(res => {
+    this.death = res[0];
     });
   }
 

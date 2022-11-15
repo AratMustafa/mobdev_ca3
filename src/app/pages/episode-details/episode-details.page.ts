@@ -10,12 +10,13 @@ import { ApiService } from '../../services/api.service';
 export class EpisodeDetailsPage implements OnInit {
 
   episode: any;
+  episodeId = null;
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit() {
-    let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.api.getEpisode(id).subscribe(res => {
-      this.episode = res;
+    this.episodeId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.api.getCharacter(this.episodeId).subscribe(res => {
+    this.episode = res[0];
     });
   }
 
