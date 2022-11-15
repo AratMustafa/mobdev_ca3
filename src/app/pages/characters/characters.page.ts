@@ -18,9 +18,8 @@ export class CharactersPage implements OnInit {
     this.characters = this.api.getCharacters();
   }
 
-  openDetails(characters){
-    let split = characters.url.split('/');
-    let charactersId = split[split.length-2];
-    this.router.navigateByUrl(`/tabs/characters/${charactersId}`);
+  openDetails(character){
+    let characterId = character.charId;
+    this.router.navigateByUrl(`/tabs/characters/${characterId}`);
   }
 }
