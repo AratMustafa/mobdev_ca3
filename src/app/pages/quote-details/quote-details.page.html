@@ -3,7 +3,7 @@
     <ion-buttons slot="start" defaulthref="/tabs/(quotes:quotes)">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ quote?.name }}</ion-title>
+    <ion-title>{{ quote?.quote }}</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -19,7 +19,7 @@
   <ion-card *ngIf="quote">
     <ion-card-content>
       <ion-icon name="people-sharp"></ion-icon>
-      Name : {{ character.name  }}
+      Name : {{ quote.quote  }}
     </ion-card-content>
    
   </ion-card>

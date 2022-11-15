@@ -16,11 +16,11 @@ export class ApiService {
     return this.http.get(`https://breakingbadapi.com/api/characters/${id}`);
   }
   getDeaths(){
-    return this.http.get('https://breakingbadapi.com/api/death-count');
+    return this.http.get('https://breakingbadapi.com/api/deaths');
   }
 
   getDeath(id){
-    return this.http.get(`https://breakingbadapi.com/api/death-count/${id}`);
+    return this.http.get(`https://breakingbadapi.com/api/deaths/${id}`);
   }
   getEpisodes(){
     return this.http.get('https://breakingbadapi.com/api/episodes');

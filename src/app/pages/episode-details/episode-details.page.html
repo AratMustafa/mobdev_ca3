@@ -3,7 +3,7 @@
     <ion-buttons slot="start" defaulthref="/tabs/(episodes:episodes)">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ episode?.id }}</ion-title>
+    <ion-title>{{ episode?.title }}</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -19,7 +19,11 @@
   <ion-card *ngIf="episode">
     <ion-card-content>
       <ion-icon name="people-sharp"></ion-icon>
-      Name : {{ episode.id  }}
+      Title : {{ episode.title  }}
+    </ion-card-content>
+    <ion-card-content>
+      <ion-icon name="people-sharp"></ion-icon>
+      Character : {{ episode.characters  }}
     </ion-card-content>
    
   </ion-card>

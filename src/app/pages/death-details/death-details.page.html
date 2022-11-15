@@ -3,7 +3,7 @@
     <ion-buttons slot="start" defaulthref="/tabs/(deaths:deaths)">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ death?.id }}</ion-title>
+    <ion-title>{{ death?.death }}</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -19,7 +19,7 @@
   <ion-card *ngIf="death">
     <ion-card-content>
       <ion-icon name="people-sharp"></ion-icon>
-      Name : {{ death.id  }}
+      Name : {{ death.death  }}
     </ion-card-content>
    
   </ion-card>
