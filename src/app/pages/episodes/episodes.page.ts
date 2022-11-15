@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ApiService } from '../../services/api.service';
-
+import { NavController } from '@ionic/angular';
+import { ApiService } from '../..//services/api.service';
 @Component({
   selector: 'app-episodes',
   templateUrl: './episodes.page.html',
@@ -11,14 +11,13 @@ import { ApiService } from '../../services/api.service';
 export class EpisodesPage implements OnInit {
 
   episodes: Observable<any>;
-  constructor(private router: Router, private api: ApiService) { }
+  constructor(private navController: NavController, private router: Router, private api: ApiService) { }
 
   ngOnInit() {
     this.episodes = this.api.getEpisodes();
   }
   openDetails(episode){
-    let split = episode.url.split('/');
-    let episodeId = split[split.length-2];
+    let episodeId = episode.episode_id;
     this.router.navigateByUrl(`/tabs/episodes/${episodeId}`);
   }
 }
