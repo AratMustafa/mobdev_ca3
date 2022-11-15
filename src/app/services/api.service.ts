@@ -20,7 +20,7 @@ export class ApiService {
   }
 
   getDeath(id){
-    return this.http.get(`https://breakingbadapi.com/api/deaths/${id}`);
+    return this.http.get(`https://breakingbadapi.com/api/death/`);
   }
   getEpisodes(){
     return this.http.get('https://breakingbadapi.com/api/episodes');
