@@ -86,12 +86,12 @@
 
   body {
  /** primary **/
- --ion-color-primary: #272b30;
+ --ion-color-primary: #05101f;
  --ion-color-primary-rgb: 39,43,48;
- --ion-color-primary-contrast: #ffffff;
+ --ion-color-primary-contrast: #b31616;
  --ion-color-primary-contrast-rgb: 255,255,255;
- --ion-color-primary-shade: #22262a;
- --ion-color-primary-tint: #3d4045;
+ --ion-color-primary-shade: #201a70;
+ --ion-color-primary-tint: #708f47;
 
  /** secondary **/
  --ion-color-secondary: #FFE300;
@@ -134,7 +134,7 @@
  --ion-color-danger-tint: #f65050;
 
  /** dark **/
- --ion-color-dark: #1c1e22;
+ --ion-color-dark: #1e1c22;
  --ion-color-dark-rgb: 28,30,34;
  --ion-color-dark-contrast: #ffffff;
  --ion-color-dark-contrast-rgb: 255,255,255;
@@ -167,7 +167,7 @@
  --ion-text-color-rgb: 255, 255, 255;
 
  ion-card {
-   --color: #fff;
+   --color: rgb(24, 122, 53);
  }
 
  ion-item {
