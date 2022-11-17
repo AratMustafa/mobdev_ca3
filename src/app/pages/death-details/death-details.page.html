@@ -15,13 +15,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngIf="death">
+<ion-content padding="">
+
+
+  <ion-card *ngIf="death"  class="death-card">
+    <ion-card-header>Death : {{ death.death }}</ion-card-header>
     <ion-card-content>
-      <ion-icon name="people-sharp"></ion-icon>
-      Name : {{ death.death }}
     </ion-card-content>
-   
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="book" slot="start"></ion-icon>
+      Episode: {{ death.episode }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="skull" slot="start"></ion-icon>
+      Number of Deaths: {{ death.number_of_deaths }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="clipboard" slot="start"></ion-icon>
+      Season: {{ death.season }}
+    </ion-item>
+
+
   </ion-card>
 
 </ion-content>

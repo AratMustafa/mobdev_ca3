@@ -15,13 +15,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngIf="character">
+<ion-content padding="">
+
+
+  <ion-card *ngIf="character"  class="character-card">
+    <ion-card-header>Character {{ character.character_id }}: {{ character.status }}</ion-card-header>
     <ion-card-content>
-      <ion-icon name="people-sharp"></ion-icon>
-      Name : {{ character.name  }}
     </ion-card-content>
-   
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="pricetag" slot="start"></ion-icon>
+      Name: {{ character.name }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="calendar-number" slot="start"></ion-icon>
+      Birthday: {{ character.birthday }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="document-text" slot="start"></ion-icon>
+      Nickname: {{ character.nickname }}
+    </ion-item>
+
+
   </ion-card>
 
 </ion-content>

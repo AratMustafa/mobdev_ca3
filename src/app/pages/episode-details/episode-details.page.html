@@ -15,14 +15,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngIf="episode">
+<ion-content padding="">
+
+
+  <ion-card *ngIf="episode"  class="episode-card">
+    <ion-card-header>Episode {{ episode.episode_id }}: {{ episode.title }}</ion-card-header>
     <ion-card-content>
-      <ion-icon name="people-sharp"></ion-icon>
-      Name : {{ episode.name  }}
     </ion-card-content>
-    
-   
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="film" slot="start"></ion-icon>
+      Characters: {{ episode.characters }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="book" slot="start"></ion-icon>
+      Episode: {{ episode.episode }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="clipboard" slot="start"></ion-icon>
+      Serie: {{ episode.series }}
+    </ion-item>
+
+
   </ion-card>
 
 </ion-content>

@@ -15,13 +15,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngIf="quote">
+<ion-content padding="">
+
+
+  <ion-card *ngIf="quote"  class="quote-card">
+    <ion-card-header>Quote {{ quote.quote_id }}: {{ quote.quote }}</ion-card-header>
     <ion-card-content>
-      <ion-icon name="people-sharp"></ion-icon>
-      Author : {{ quote.name  }}
     </ion-card-content>
-   
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="laptop" slot="start"></ion-icon>
+      Author: {{ quote.author }}
+    </ion-item>
+
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="clipboard" slot="start"></ion-icon>
+      Serie: {{ quote.series }}
+    </ion-item>
+
+
+
   </ion-card>
 
 </ion-content>
