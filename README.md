@@ -1,6 +1,4 @@
-# mobdev_ca3
-
-**** Welcome to mobdev_ca3 ****
+## **** Welcome to mobdev_ca3 ****
 ## Usage
 
 ```sh
