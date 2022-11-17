@@ -3,7 +3,7 @@
 
 ```sh
 npm i -g @ionic/cli && ionic serve is going to run automaticly,we need to just hit 'y' or 'Y' in terminal,
-(not case sensetive)to give allow to install ionic serve to your gitpod!
+(not case sensetive)to give allow to install ionic serve to your project!
 ```
 
 Already created a Dockerfile for cbwa_ca2
