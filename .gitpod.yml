@@ -3,7 +3,7 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: npm i -g @ionic/cli && ionic serve
+  - init: npm i -g @ionic/cli && npm i -D -E @angular/cli && ionic serve
     command: npm run start
 
 
